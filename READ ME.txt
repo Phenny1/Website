@@ -1,0 +1,7 @@
+Mega Tech has been designed to bring electronic products and appliances to our local and international customers.
+
+TECHNOLOGY USED
+
+Css, HtmL,Xml,Xhtml
+
+PROJECT ON GITHUB

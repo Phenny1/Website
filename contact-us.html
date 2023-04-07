@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="lolkittens" />
+<link rel="stylesheet" type="text/css" href="css/mystyle.css"/>
+	<title>Contact Us</title>
+<script>
+function validateForm() {
+var name = document.forms.contactForm.Name.value;
+var email = document.forms.contactForm.Email.value;
+var subject = document.forms.contactForm.Subject.value;
+var message = document.forms.contactForm.Message.value;
+var regEmail=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;                                        // Javascript reGex for Phone Number validation.
+var regName = /\d+$/g;   
+ if (name == "" || regName.test(name)) {
+        window.alert("Please enter your name properly.");
+        name.focus();
+        return false;
+    }
+  
+    if (message == "") {
+        window.alert("Please enter your message.");
+        address.focus();
+        return false;
+    }
+      
+    if (email == "" || !regEmail.test(email)) {
+        window.alert("Please enter a valid e-mail address.");
+        email.focus();
+        return false;
+    }
+       
+    if (name == "") {
+        alert("Please enter your name");
+        password.focus();
+        return false;
+    }
+  
+}
+</script>
+
+</head>
+
+<body>
+<!-- Navigation bar -->
+    <header class="header">
+        <!-- Logo -->
+        <a href="#" class="logo">MEGA Tech</a>
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="about-us.html">About</a> </li>
+                <li><a href="products.html">Products/services</a></li>
+                 <li ><a href="contact-us.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+<main>
+        <div class="col-8 text-center auto">
+            <h1>
+               Contact Us
+            </h1>
+            <p class="text-justify wid-80">
+               Incase you have any queries about ousr services or products, please contact us us via the below form
+            </p>
+        </div>
+<div class="col-12 text-center auto">
+              
+            <form class="data-form auto" name="contactForm" onsubmit="return validateForm()" >
+            <div>
+            <label for="name">Enter Fullnames</label>
+            <input  type="text" name="Name"  placeholder="Enter your full names"/>
+          </div>
+           <div>
+            <label for="email">Email </label>
+            <input  type="text" name="Email" placeholder="Enter your email"/>
+          </div>
+          <div>
+            <label for="subject">Subject </label>
+            <input  type="text" name="Subject" placeholder="Enter message subjet"/>
+          </div>
+          <div>
+            <label for="subject">Message </label>
+           <textarea placeholder="Enter your message" rows="5" name="Message"></textarea>
+          </div>
+           <div>
+           
+           <button type="submit" name="contact-us" class="submit-button">Contact Us</button>
+          </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

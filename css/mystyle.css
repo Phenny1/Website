@@ -1,0 +1,302 @@
+        
+        :root{
+        --white: #f9f9f9;
+        --black: #36383F;
+        --grey: #85888C;
+        }
+        
+        .text-center{
+        text-align:center !important;    
+        }
+        .text-justify{
+        text-align:justify !important;    
+        }
+        .text-left{
+        text-align:left !important;    
+        }
+        .text-right{
+        text-align:right !important;    
+        }
+        .col-1 {width: 8%}
+.col-2 {width: 17%}
+.col-3 {width: 25%}
+.col-4 {width: 33%}
+.col-5 {width: 42%}
+.col-6 {width: 50%}
+.col-7 {width: 58%}
+.col-8 {width: 57%}
+.col-9 {width: 75%}
+.col-10 {width: 83%}
+.col-11 {width: 92%}
+.col-12 {width: 100%}
+.fl{
+ float:left;   
+}
+.fra{
+ float:right;   
+}
+        h1,p{
+            display:block;
+        }
+        form.data-form{
+        
+        width:60%;
+        margin: 0 auto;
+        height: auto;
+        overflow:hidden;  
+        }
+        form.data-form label{
+        display:block; 
+        padding:5px 0;   
+        text-align:left;
+        color:darkblue;
+        }
+         form.data-form input,form.data-form textarea{
+          display:block; 
+        padding:5px 5px;   
+        text-align:left;
+        width:60%;
+        line-height:20px;
+         }
+         .submit-button{
+            width:30%;
+         border:none;padding:20px 5px;
+         border-radius:5px;
+         background-color:darkgreen;
+         color:white;
+         display:block; 
+         margin:10px; 
+         opacity:0.7
+         }
+         .submit-button:hover{
+            background-color:darkgreen;
+             opacity:1;
+             cursor: pointer;
+            }
+        body{
+        margin:0 auto;
+        
+        }
+        .auto{
+            margin:10px auto;
+        }
+        
+        a{
+        text-decoration: none;
+        }
+        
+        ul{
+        list-style: none;
+        }
+        
+        /* Header */
+        .header{
+        background-color: black;
+        box-shadow: 1px 1px 5px 0px gray;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        }
+        
+        /* Logo */
+        .logo{
+        display: inline-block;
+        color: white;
+        font-size: 60px;
+        margin-left: 10px;
+        
+        }
+        
+        /* Nav menu */
+        .nav{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        background-color: gold;
+        overflow: hidden;
+        
+        }
+        
+        .menu a{
+        display: block;
+        padding: 30px;
+        color: white;
+        text-transform:uppercase;
+        }
+        
+        .menu a:hover{
+        background-color: gray;
+        }
+        .menu a.active{
+        color: red;
+        }
+        .nav{
+        max-height: 0;
+        transition: max-height .5s ease-out;
+        
+        }
+        
+        .hamb{
+        cursor: pointer;
+        float: right;
+        padding: 40px 20px;
+        }
+        
+        
+        .hamb-line {
+        background: white;
+        display: block;
+        height: 2px;
+        position: relative;
+        width: 24px;
+        
+        }
+        
+        .hamb-line::before,
+        .hamb-line::after{
+        background: white;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+        }
+        
+        .hamb-line::before{
+        top: 5px;
+        }
+        
+        .hamb-line::after{
+        top: -5px;
+        }
+        
+        
+        .side-menu {
+        display: none;
+        }
+        
+        /* Toggle menu icon */
+        
+        .side-menu:checked ~ nav{
+        max-height: 100%;
+        }
+        
+        .side-menu:checked ~ .hamb .hamb-line {
+        background: transparent;
+        }
+        
+        .side-menu:checked ~ .hamb .hamb-line::before {
+        transform: rotate(-45deg);
+        top:0;
+        
+        }
+        
+        .side-menu:checked ~ .hamb .hamb-line::after {
+        transform: rotate(45deg);
+        top:0;
+        }
+        
+        
+     
+        
+        @media (min-width: 768px) {
+        .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+        
+        }
+        
+        .menu li{
+        float: left;
+        }
+        
+        .menu a:hover{
+        background-color: transparent;
+        color: gray;
+        
+        }
+        
+        .hamb{
+        display: none;
+        }
+        
+        }
+        .list-products div{
+         width:;
+         height:auto;
+         overflow:hidden   
+        }
+        .list-products div p img{
+         width:80%;
+         height:80%;
+         margin:0 auto;   
+        }
+        .list-products div p{
+         display:block;  
+        }
+        .list-products div p:last-child{
+         color:maroon; 
+        }
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .col-3 {width: 100%}  
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .col-3 {width: 50%}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    
+    .col-3 {width: 50%}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+ .col-3 {width: 25%}   
+}
+p{
+font-size:15px;
+font-family:Arial Unicode MS;
+line-height:30px;
+}
+table.about{
+width:100%;    
+}
+table.about tr td{
+padding:3px;
+font-size:15px;
+font-family:Arial Unicode MS;
+line-height:30px;  
+text-align:left; 
+}
+table.about tr{
+padding-bottom:1em;
+}
+table.about tr td:first-child{
+width:30%;
+}
+table.about tr td:last-child{
+width:70%;
+
+}
+table.products{
+width:80%; 
+margin:0 auto;   
+}
+table.products tr td{
+width:50%;  
+line-height:30px;  
+background:maroon;
+text-align:center;
+color:white;
+}
